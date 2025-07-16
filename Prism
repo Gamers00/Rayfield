@@ -1,0 +1,275 @@
+local sound = Instance.new("Sound")
+
+sound.SoundId = 109658124225324
+sound.Volume = 2
+sound.Playing = true
+
+
+local StarterGui = game:GetService("StarterGui")
+StarterGui:SetCore("SendNotification", {
+  Title = "Prism Hub",
+  Text = "Script is Loaded...",
+  Icon = "rbxassetid://109645039329677",
+  Duration = 5,
+})
+wait(5.5)
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Prism Hub (The majority)",
+   Icon = 109645039329677, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "We are preparing everything for you.",
+   LoadingSubtitle = "by Shariu",
+   ShowText = "Prism", -- for mobile users to unhide rayfield, change if you'd like
+   Theme = "Ocean", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
+
+   DisableRayfieldPrompts = true,
+   DisableBuildWarnings = true, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Updated: 16.7.25",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "by Shairiu",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Tab = Window:CreateTab("Home", 0) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Remote spy",
+   Callback = function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Remote spy",
+   Callback = function()
+   loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Anti Afk",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringypVvhJBq4QNz", true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "FPS Counter",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/vXm0vkkc"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Dark Dex V3",
+   Callback = function()
+   local StarterGui = game.StarterGui
+   StarterGui:SetCore("SendNotification", {
+   	Title = "Use Dex from",
+   Text = "Infinite yield..",
+})
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Chat Bypasser",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/randomizedcomponent/UC/refs/heads/main/3307468c285f4fe535fb5d87b4b053e6.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Shaders",
+   Callback = function()
+   local StarterGui = game:GetService("StarterGui")
+
+function callback(Text)
+if Text == "Blur" then
+loadstring(game:HttpGet("https://pastebin.com/raw/42PPvjWc"))()
+elseif Text == "No Blur" then
+loadstring(game:HttpGet("https://pastebin.com/raw/vd4cUiTC"))()
+end
+end
+
+local bn = Instance.new("BindableFunction")
+bn.OnInvoke = callback
+
+-- Exibir a notificação
+StarterGui:SetCore("SendNotification", {
+    Title = "Choice",
+    Text = "Choose an option:", -- Adicionei um texto para a notificação ficar mais clara
+    Button1 = "Blur",
+    Button2 = "No Blur",
+    Duration = 5, -- Duração em segundos antes da notificação desaparecer se não houver interação
+    Callback = bn
+})
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Copy Pos",
+   Callback = function()
+   setclipboard(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.X .. ", " .. game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y .. ", " .. game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Z)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Verbalizer gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/tK2D6bv6"))()
+   wait(.5)
+   local StarterGui = game:GetService("StarterGui")
+
+function callback(Text)
+if Text == "Yep" then
+Rayfield:Destroy()
+elseif Text == "No" then
+
+end
+end
+
+local bm = Instance.new("BindableFunction")
+bm.OnInvoke = callback
+
+-- Exibir a notificação
+StarterGui:SetCore("SendNotification", {
+    Title = "Destroy Prism?",
+    Text = "Choose an option:", -- Adicionei um texto para a notificação ficar mais clara
+    Button1 = "Yep",
+    Button2 = "No",
+    Duration = 5, -- Duração em segundos antes da notificação desaparecer se não houver interação
+    Callback = bm
+})
+   end,
+})
+
+local Tab = Window:CreateTab("Others Games", 0) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Grow a Garden",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Grow-a-Garden-Best-Keyless-GAG-script-39948"))()
+   wait(.5)
+   local StarterGui = game:GetService("StarterGui")
+
+function callback(Text)
+if Text == "Yep" then
+Rayfield:Destroy()
+elseif Text == "No" then
+
+end
+end
+
+local bp = Instance.new("BindableFunction")
+bp.OnInvoke = callback
+
+-- Exibir a notificação
+StarterGui:SetCore("SendNotification", {
+    Title = "Destroy Prism?",
+    Text = "Choose an option:", -- Adicionei um texto para a notificação ficar mais clara
+    Button1 = "Yep",
+    Button2 = "No",
+    Duration = 5, -- Duração em segundos antes da notificação desaparecer se não houver interação
+    Callback = bp
+})
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "MM2",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Serwxl/Community/refs/heads/main/DiasXHUB"))()
+   wait(.5)
+   local StarterGui = game:GetService("StarterGui")
+
+function callback(Text)
+if Text == "Yep" then
+Rayfield:Destroy()
+elseif Text == "No" then
+
+end
+end
+
+local bi = Instance.new("BindableFunction")
+bi.OnInvoke = callback
+
+-- Exibir a notificação
+StarterGui:SetCore("SendNotification", {
+    Title = "Destroy Prism?",
+    Text = "Choose an option:", -- Adicionei um texto para a notificação ficar mais clara
+    Button1 = "Yep",
+    Button2 = "No",
+    Duration = 5, -- Duração em segundos antes da notificação desaparecer se não houver interação
+    Callback = bi
+})
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Flee the Facility",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", false))()
+   wait(.5)
+   local StarterGui = game:GetService("StarterGui")
+
+function callback(Text)
+if Text == "Yep" then
+Rayfield:Destroy()
+elseif Text == "No" then
+
+end
+end
+
+local bl = Instance.new("BindableFunction")
+bl.OnInvoke = callback
+
+-- Exibir a notificação
+StarterGui:SetCore("SendNotification", {
+    Title = "Destroy Prism?",
+    Text = "Choose an option:", -- Adicionei um texto para a notificação ficar mais clara
+    Button1 = "Yep",
+    Button2 = "No",
+    Duration = 5, -- Duração em segundos antes da notificação desaparecer se não houver interação
+    Callback = bl
+})
+   end,
+})
